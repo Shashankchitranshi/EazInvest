@@ -339,6 +339,8 @@ span {
     @media screen and (max-width: 767px) {
       .footer-container .social-media {
         padding: 20px 0; } }
+    .footer-container .social-media .social-head {
+      margin-bottom: 20px; }
     .footer-container .social-media .social-icon {
       margin-top: 10px;
       display: inline-block;
