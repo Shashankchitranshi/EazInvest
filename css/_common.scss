@@ -2,6 +2,11 @@ body {
     font-family: ProximaNova-Regular;
 }
 
+* {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
 // Headings, paragraph and anchor tags
 h1 {
     font-size: 50px;
@@ -184,7 +189,7 @@ span {
         width: auto;
     }
     .content-holder {
-        padding: 50px 0 50px 30px;
+        padding: 20px 40px;
         @media screen and(max-width: 767px) {
             padding: 0;
         }
@@ -226,6 +231,9 @@ span {
         .inner-heading {
             h4 {
                 color: $primaryColor;
+                text-transform: uppercase;
+                font-size: $smallFont - 4;
+                letter-spacing: 1px;
             }
         }
         h4 {
@@ -269,6 +277,7 @@ span {
     background-color: #008DF3;
     background-image: url("../images/subscribe-bg.png");
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .dot-seprator {
@@ -286,11 +295,18 @@ span {
     position: fixed;
     right: 30px;
     bottom: 30px;
+    box-shadow: $warningBoxShadow;
     @media screen and(max-width: 767px) {
         width: auto;
         right: 0;
         bottom: 0;
         margin: 10px;
+    }
+    .box {
+        padding: 35px;
+    }
+    p {
+        font-size: $smallFont - 2;
     }
     h4 {
         margin-bottom: 15px;
@@ -303,7 +319,7 @@ span {
         margin-top: 10px;
         p {
             span {
-                font-size: 16px;
+                font-size: $smallFont - 2;
                 color: $primaryColor;
                 @media screen and(max-width: 767px) {
                     font-size: $smallFont - 4;

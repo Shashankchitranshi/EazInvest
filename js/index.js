@@ -41,7 +41,6 @@ $(document).ready(function() {
             $(".error-name").addClass("display");
             $(".error-email").removeClass("display");
         } else {
-            console.log(postData);
             $(".error-name").addClass("display");
             $(".error-email").addClass("display");
             $.ajax({
@@ -52,9 +51,13 @@ $(document).ready(function() {
                     data: JSON.stringify(postData),
                 })
                 .done(function(data) {
-                    console.log(data);
+                    $('#form').each(function() {
+                        this.reset();
+                    });
+                    $(".green").removeClass("display");
                 });
         }
+
 
     });
 
