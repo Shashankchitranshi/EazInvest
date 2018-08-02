@@ -31,12 +31,12 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="nav-taget" data-id="crowd-equity">Crowd Equity</a></li>
-                        <li><a class="nav-taget" data-id="crowd-lending">Crowd Lending</a></li>
-                        <li><a class="nav-taget" data-id="our-methordology">Our Methodology</a></li>
-                        <li><a class="nav-taget" data-id="our-blog">Blogs</a></li>
+                        <li><a class="nav-taget scroll" data-id="crowd-equity">Crowd Equity</a></li>
+                        <li><a class="nav-taget scroll" data-id="crowd-lending">Crowd Lending</a></li>
+                        <li><a class="nav-taget scroll" data-id="our-methordology">Our Methodology</a></li>
+                        <li><a class="nav-taget scroll" data-id="our-blog">Blogs</a></li>
                         <li>
-                            <a class="pad0 "> <button data-id="know-more" class="btn btn-primary ">Get on the list</button></a>
+                            <a class="pad0 "> <button data-id="know-more" class="btn btn-primary scroll ">Get on the list</button></a>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle nav-taget" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/flag-en.png" alt=""> EN <span class="caret"></span></a>
@@ -62,7 +62,7 @@
     </header>
     <section class="" id="our-blog">
         <div class="section-holder new-holder">
-            <div class="mar-top-40">
+            <div class="">
                 <div class="">
                     <div class="image-holder">
                         <img src="images/blog.png" alt="">
@@ -95,7 +95,7 @@
     <section class="section-padding bg-blue" id="know-more">
         <div class="section-holder interested-know-more">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="left-section">
                         <img class="hidden-xs" src="images/subscribe-large.png" alt="">
                         <h2>Interested to know more?</h2>
@@ -103,13 +103,15 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="box white-bg clearfix right-section">
-                        <form action="">
-                            <input type="text" placeholder="Your Name Here">
-                            <input type="text" placeholder="Your Email ID">
-                            <textarea name="" id="" cols="30" rows="5" placeholder="Leave us a message..."></textarea>
-                            <button class="btn btn-primary pull-right">Get on the list</button>
+                        <form id="form">
+                            <input type="text" name="name" placeholder="Your Name Here">
+                            <p class="error error-name display">Please Enter User Name</p>
+                            <input type="text" name="email" placeholder="Your Email ID">
+                            <p class="error error-email display">Please Enter Your Email Id</p>
+                            <textarea id="message" name="message" cols="30" rows="2" placeholder="Leave us a message..."></textarea>
+                            <button id="form-submit" class="btn btn-primary pull-right">Get on the list</button>
                         </form>
                     </div>
                 </div>
@@ -149,6 +151,26 @@
             </div>
         </div>
     </footer>
+    <div class="risk-warning display">
+        <div class="box white-bg">
+            <h4><img src="images/risk-red.png" alt="">Risk Warning</h4>
+            <p>Investing in or lending to early stage businesses involves a high level of risk, including illiquidity (inability to sell assets quickly or without substantial loss in value), lack of dividends, loss of capital and dilution risks and it should
+                be done only as part of a diversified portfolio. Tax treatment depends on the individual circumstances of each investor and may be subject to change in the future. Your capital is at risk.
+            </p>
+            <div class="row clearfix">
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <div class="terms">
+                        <p>Read our <a href=""><span>Terms & Conditions</span></a></p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="pull-right">
+                        <button id="risk" class="btn btn-primary pull-right">I understand</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

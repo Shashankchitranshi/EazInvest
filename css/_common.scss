@@ -65,6 +65,9 @@ span {
 // Border and border radius
 .border-all {
     border: 1px solid $borderColor;
+    @media screen and(min-width: 768px) and (max-width: 991px) {
+        border: 0px solid transparent;
+    }
 }
 
 .border-bottom {
@@ -84,11 +87,17 @@ span {
     @media screen and(max-width: 767px) {
         border-left: 0px solid transparent;
     }
+    @media screen and(min-width: 768px) and (max-width: 991px) {
+        border-left: 0px solid transparent;
+    }
 }
 
 .common-height {
     height: 150px;
     @media screen and(max-width: 767px) {
+        height: auto;
+    }
+    @media screen and(min-width: 768px) and (max-width: 991px) {
         height: auto;
     }
 }
@@ -165,8 +174,14 @@ span {
     width: 900px;
     margin: 0 auto;
     position: relative;
-    @media screen and(max-width: 767px) {
+    @media screen and(min-width: 375px) and (max-width: 767px) {
         width: 320px;
+    }
+    @media screen and(max-width: 374px) {
+        width: 250px;
+    }
+    @media screen and(min-width: 768px) and (max-width: 991px) {
+        width: auto;
     }
     .content-holder {
         padding: 50px 0 50px 30px;
@@ -198,6 +213,12 @@ span {
             bottom: 0;
             left: 0;
         }
+        @media screen and(min-width: 768px) and (max-width: 991px) {
+            position: relative;
+            bottom: 120px;
+            left: 20px;
+            width: 680px;
+        }
         &.right-img {
             left: 0 !important;
             right: 40px;
@@ -222,11 +243,26 @@ span {
     }
     &.new-holder {
         width: 700px !important;
+        padding-top: 100px;
+        @media screen and(max-width: 767px) {
+            width: auto !important;
+            padding: 40px;
+        }
+        @media screen and(min-width: 768px) and (max-width: 991px) {
+            width: 550px !important;
+            padding-top: 100px;
+        }
     }
 }
 
 .mar-top-40 {
     margin-top: 40px;
+}
+
+.mar-top100 {
+    @media screen and(min-width: 768px) and (max-width: 991px) {
+        margin-top: -100px;
+    }
 }
 
 .bg-blue {
@@ -281,4 +317,10 @@ span {
     color: #353A40;
     font-family: ProximaNova-Regular;
     font-size: $mediumFont - 2;
+}
+
+.error {
+    color: red !important;
+    font-size: 12px;
+    margin: 5px 0 0;
 }

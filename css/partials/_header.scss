@@ -4,11 +4,25 @@
     border-radius: 0;
     box-shadow: $boxShadow;
     margin: 0;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    @media screen and(max-width: 767px) {
+        position: relative;
+    }
+    .container {
+        @media screen and(min-width: 768px)and(max-width: 991px) {
+            width: auto !important
+        }
+    }
     .navbar-brand {
         color: #000000;
         font-size: 24px;
         font-weight: 700;
         font-family: CircularStd-Black;
+        @media screen and(min-width: 768px)and(max-width: 991px) {
+            font-size: 24px !important;
+        }
     }
     button {
         padding: 5px 15px;
@@ -28,6 +42,10 @@
         cursor: pointer;
         padding-top: 25px;
         padding-bottom: 25px;
+        @media screen and(min-width: 768px)and(max-width: 991px) {
+            padding: 25px 10px !important;
+            font-size: 14px;
+        }
     }
     .dropdown {
         a {

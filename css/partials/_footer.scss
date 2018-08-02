@@ -30,6 +30,7 @@
             h4 {
                 color: $whiteColor;
                 display: inline-block;
+                cursor: pointer;
                 @media screen and(max-width: 767px) {
                     font-size: 11px;
                 }

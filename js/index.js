@@ -2,26 +2,30 @@
 $(document).ready(function() {
     $("#risk").click(function() {
         $(".risk-warning").addClass("display");
+        localStorage.setItem('value', 'true');
     });
 
-});
-$(document).ready(function() {
+    var val = localStorage.getItem('value')
+    console.log(val);
+    if (val) {
+        $(".risk-warning").addClass("display");
+    }
+
     $(".open-risk").click(function() {
         $(".risk-warning").removeClass("display");
     });
 
-});
-
-//scroll
-$(".nav-taget").click(function() {
-    var id = $(this).attr('data-id')
-    $('html, body').animate({
-        scrollTop: $('#' + id).offset().top
-    }, 1000);
-});
 
 
-$(document).ready(function() {
+    //scroll
+    $(".scroll").click(function() {
+        var id = $(this).attr('data-id')
+        $('html, body').animate({
+            scrollTop: $('#' + id).offset().top - 60
+        }, 1000);
+    });
+
+
 
     $('#form-submit').click(function() {
         event.preventDefault();
@@ -31,20 +35,27 @@ $(document).ready(function() {
             "email": formData[1].value,
             "message": formData[2].value
         };
-        console.log(postData);
-        $.ajax({
-                type: 'POST',
-                url: 'ec2-35-180-34-120.eu-west-3.compute.amazonaws.com:8080/newsLetter/subscribe',
-                data: postData,
-                dataType: 'json',
-                encode: true,
-                headers: {
-                    'Access-Control-Allow-Headers': '*'
-                },
-            })
-            .done(function(data) {
-                console.log(data);
-            });
+        if (formData[0].value == "") {
+            $(".error-name").removeClass("display");
+        } else if (formData[1].value == "") {
+            $(".error-name").addClass("display");
+            $(".error-email").removeClass("display");
+        } else {
+            console.log(postData);
+            $(".error-name").addClass("display");
+            $(".error-email").addClass("display");
+            $.ajax({
+                    type: 'POST',
+                    url: 'ec2-35-180-34-120.eu-west-3.compute.amazonaws.com:8080/newsLetter/subscribe',
+                    data: postData,
+                    dataType: 'json',
+                    encode: true,
+                    ContentType: 'applicatin/json;charset=utf-8',
+                })
+                .done(function(data) {
+                    console.log(data);
+                });
+        }
 
     });
 
