@@ -45,14 +45,11 @@ $(document).ready(function() {
             $(".error-name").addClass("display");
             $(".error-email").addClass("display");
             $.ajax({
-                    type: 'POST',
-                    url: 'ec2-35-180-34-120.eu-west-3.compute.amazonaws.com:8080/newsLetter/subscribe',
-                    data: postData,
-                    dataType: 'json',
-                    header: {
-                        ContentType: 'applicatin/json;charset=utf-8',
-                    }
-
+                    url: "http://ec2-35-180-34-120.eu-west-3.compute.amazonaws.com:8080/newsLetter/subscribe/",
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(postData),
                 })
                 .done(function(data) {
                     console.log(data);
