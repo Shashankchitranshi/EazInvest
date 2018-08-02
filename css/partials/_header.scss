@@ -1,0 +1,57 @@
+.navbar-default {
+    background-color: $whiteColor;
+    border-color: $whiteColor;
+    border-radius: 0;
+    box-shadow: $boxShadow;
+    margin: 0;
+    .navbar-brand {
+        color: #000000;
+        font-size: 24px;
+        font-weight: 700;
+        font-family: CircularStd-Black;
+    }
+    button {
+        padding: 5px 15px;
+        margin-top: 18px;
+        @media screen and(max-width: 767px) {
+            padding: 10px;
+        }
+    }
+    .dropdown-menu {
+        p {
+            display: inline-block;
+            vertical-align: text-top;
+            margin-left: 10px;
+        }
+    }
+    .nav-taget {
+        cursor: pointer;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .dropdown {
+        a {
+            img {
+                vertical-align: baseline;
+                margin: 0 10px;
+            }
+        }
+        &.open {
+            a {
+                &:hover,
+                &:focus {
+                    color: #777 !important;
+                    background-color: $whiteColor !important;
+                }
+            }
+        }
+    }
+}
+
+.nav {
+    li {
+        @media screen and(max-width: 767px) {
+            padding: 0 20px;
+        }
+    }
+}

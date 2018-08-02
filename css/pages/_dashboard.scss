@@ -1,0 +1,122 @@
+.banner-image {
+    position: relative;
+    .top-head {
+        width: 450px;
+        margin: 0 auto;
+        @media screen and(max-width: 767px) {
+            width: 200px;
+        }
+        h1 {
+            position: absolute;
+            top: 30%;
+            text-align: center;
+            width: 450px;
+            font-family: CircularStd-Bold;
+            @media screen and(max-width: 767px) {
+                width: 200px;
+                font-size: 20px;
+            }
+        }
+    }
+    .know-more {
+        width: 700px;
+        position: absolute;
+        bottom: -23px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        @media screen and(max-width: 767px) {
+            width: 320px;
+            top: 80%;
+        }
+        img {
+            width: auto;
+        }
+        h3 {
+            margin: 10px 0 0;
+            @media screen and(max-width: 767px) {
+                font-size: 16px;
+                margin: 0 0 5px;
+            }
+        }
+        p {
+            @media screen and(max-width: 767px) {
+                font-size: 12px
+            }
+        }
+        .btn {
+            float: right;
+            margin: 16px;
+            @media screen and(max-width: 767px) {
+                float: none;
+                margin: 10px;
+            }
+        }
+    }
+}
+
+.blog {
+    height: 365px;
+    @media screen and(max-width: 767px) {
+        height: auto;
+    }
+    h4 {
+        margin: 20px 0;
+    }
+    p {
+        margin-bottom: 30px;
+    }
+}
+
+.interested-know-more {
+    .left-section {
+        padding: 60px;
+        @media screen and(max-width: 767px) {
+            padding: 20px 0;
+        }
+    }
+    .right-section {
+        padding: 40px;
+        border-radius: 10px;
+        margin: 20px 40px;
+        @media screen and(max-width: 767px) {
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 0 30px;
+        }
+    }
+    h2 {
+        color: $whiteColor;
+        font-size: $largeFont + 10;
+        margin-bottom: 20px;
+        @media screen and(max-width: 767px) {
+            font-size: $largeFont - 5;
+            margin-bottom: 10px;
+        }
+    }
+    p {
+        color: $whiteColor;
+    }
+    input {
+        width: 100%;
+        margin-top: 20px;
+        border: 1px solid #DFE3E8;
+        border-radius: 4px;
+        height: 40px;
+        padding: 0 10px;
+    }
+    textarea {
+        margin: 20px 0;
+        border: 1px solid #DFE3E8;
+        border-radius: 4px;
+        width: 100%;
+        resize: none;
+        padding: 20px;
+    }
+}
+
+#our-blog {
+    .border-all {
+        border: 1px solid transparent;
+    }
+}
