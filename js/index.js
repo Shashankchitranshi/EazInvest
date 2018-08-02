@@ -49,8 +49,10 @@ $(document).ready(function() {
                     url: 'ec2-35-180-34-120.eu-west-3.compute.amazonaws.com:8080/newsLetter/subscribe',
                     data: postData,
                     dataType: 'json',
-                    encode: true,
-                    ContentType: 'applicatin/json;charset=utf-8',
+                    header: {
+                        ContentType: 'applicatin/json;charset=utf-8',
+                    }
+
                 })
                 .done(function(data) {
                     console.log(data);
